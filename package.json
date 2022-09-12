@@ -10,7 +10,9 @@
   "scripts": {
     "build": "node build.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build"
+    "build-storybook": "build-storybook -o docs",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
