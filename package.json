@@ -10,7 +10,7 @@
   "scripts": {
     "build": "node build.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
