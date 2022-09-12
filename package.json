@@ -1,0 +1,54 @@
+{
+  "name": "moedim",
+  "version": "0.1.0",
+  "description": "A small React package for picking a single date from a calendar.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:Renddslow/moedim",
+  "author": "Matt McElwee <mubatt@wyopub.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@dmsi/prettier-config": "^1.3.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.19",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.5",
+    "esbuild": "^0.15.7",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "make-dir": "^3.1.0",
+    "mri": "^1.2.0",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5",
+    "typescript": "^4.8.3"
+  },
+  "prettier": "@dmsi/prettier-config",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
+  "dependencies": {
+    "calendarize": "^1.1.1",
+    "date-fns": "^2.29.2"
+  }
+}
