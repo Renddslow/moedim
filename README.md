@@ -1,6 +1,11 @@
 # Moedim
 
-> A small React package for picking a single date from a calendar.
+> A light-weight, localizable and customizable, styled React calendar component.
+
+<div align="center">
+  <img width="250" alt="image" src="https://user-images.githubusercontent.com/12091479/189707811-b1461c9a-2d20-4389-bd25-2e84321b9442.png">
+</div>
+
 
 ## Getting Started
 
