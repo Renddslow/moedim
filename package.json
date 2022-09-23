@@ -2,23 +2,18 @@
   "name": "moedim",
   "version": "0.3.0",
   "description": "A small React package for picking a single date from a calendar.",
-  "main": "dist/index.js",
+  "main": "index.js",
   "repository": "git@github.com:Renddslow/moedim",
   "author": "Matt McElwee <mubatt@wyopub.com>",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "node build.js",
+    "postbuild": "cp package.json dist/package.json && sed -i '' 's/\"type\": \"module\",//' dist/package.json && cp README.md dist/README.md",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
-  },
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    }
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",

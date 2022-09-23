@@ -19,15 +19,8 @@ const baseConfig = {
   external: [...Object.keys(pkg.dependencies), ...Object.keys(pkg.peerDependencies)],
 };
 
-Promise.all([
-  build({
-    ...baseConfig,
-    format: 'esm',
-    outfile: 'dist/index.js',
-  }),
-  build({
-    ...baseConfig,
-    format: 'cjs',
-    outfile: 'dist/index.cjs',
-  }),
-]);
+build({
+  ...baseConfig,
+  format: 'esm',
+  outfile: 'dist/index.js',
+});
