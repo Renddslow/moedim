@@ -1,6 +1,6 @@
 {
   "name": "moedim",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A small React package for picking a single date from a calendar.",
   "main": "dist/index.js",
   "repository": "git@github.com:Renddslow/moedim",
