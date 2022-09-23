@@ -8,15 +8,26 @@ const prog = mri(process.argv.slice(2), {
   boolean: ['watch', 'minify'],
 });
 
-build({
+const baseConfig = {
   entryPoints: ['src/index.ts'],
   bundle: true,
   platform: 'browser',
-  outfile: 'dist/index.js',
-  format: 'esm',
   minify: prog.minify,
   jsxFactory: 'React',
   jsxFragment: 'Fragment',
   watch: prog.watch,
   external: [...Object.keys(pkg.dependencies), ...Object.keys(pkg.peerDependencies)],
-});
+};
+
+Promise.all([
+  build({
+    ...baseConfig,
+    format: 'esm',
+    outfile: 'dist/index.js',
+  }),
+  build({
+    ...baseConfig,
+    format: 'cjs',
+    outfile: 'dist/index.cjs',
+  }),
+]);
