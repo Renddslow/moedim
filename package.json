@@ -9,11 +9,12 @@
   "type": "module",
   "scripts": {
     "build": "node build.js",
-    "postbuild": "cp package.json dist/package.json && sed -i '' 's/\"type\": \"module\",//' dist/package.json && cp README.md dist/README.md",
+    "postbuild": "cp package.json dist/package.json && npm run clean-pkg && cp README.md dist/README.md",
+    "clean-pkg": "sed -i '' '/\"type\": \"module\",/d' dist/package.json && sed -i '' '/\"prepare\":/d' dist/package.json",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
