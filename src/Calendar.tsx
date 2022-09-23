@@ -56,10 +56,14 @@ const Calendar = ({ className, value = new Date(), locale = 'en-US', onChange }:
       <TitleRow aria-label="Calendar Navigation">
         <Title>{month}</Title>
         <NavigationRow>
-          <NavigationButton aria-label={`Previous month`} onClick={handlePreviousMonth}>
+          <NavigationButton
+            type="button"
+            aria-label={`Previous month`}
+            onClick={handlePreviousMonth}
+          >
             <Chevron />
           </NavigationButton>
-          <NavigationButton aria-label={`Next month`} onClick={handleNextMonth}>
+          <NavigationButton type="button" aria-label={`Next month`} onClick={handleNextMonth}>
             <Chevron />
           </NavigationButton>
         </NavigationRow>
